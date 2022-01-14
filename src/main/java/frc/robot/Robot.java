@@ -85,9 +85,9 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void teleopPeriodic() {
-    x = controller.getX(Hand.kLeft);
-    y = controller.getY(Hand.kLeft);
-    rot = controller.getX(Hand.kRight);
+    x = 0.5 * controller.getX(Hand.kLeft);
+    y = 0.5 * controller.getY(Hand.kLeft);
+    rot = 0.5 * controller.getX(Hand.kRight);
     driveTrain.driveCartesian(x, y, rot);
   }
 }
